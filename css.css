@@ -1,0 +1,151 @@
+:root{
+    --lightgreen: #D7F9F1;
+    --goodgreen: #7AA095;
+    --darkgreen: #40531B;
+    --parrotgreen: #618B4A;
+    --wallgreen: #AFBC88;
+}
+@font-face {font-family: robotor; src: url(RobotoR.ttf);}
+*{margin: 0; padding: 0; box-sizing: border-box; font-family: robotor;}
+html{scroll-behavior: smooth;}
+    /* ============= main css =============== */
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: var(--goodgreen);
+}
+.logo{
+    color: white;
+}
+.header .nav button{
+    font-size: 14px;
+    padding: 4px;
+    border: none;
+    color: white;
+    background-color: var(--darkgreen);
+    border-bottom: 1px solid var(--darkgreen);
+    margin-right: 5px;
+}
+.header .nav form input,.header .nav form button{
+    font-size: 14px;
+    padding: 4px;
+    border: none;
+    border-bottom: 1px solid var(--darkgreen);
+    margin-right: 5px;
+}
+.mainbody{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    padding-top: 10%;
+}
+.mainbody .formcontainer{
+    background-color: var(--goodgreen);
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+}
+.mainbody .register{
+    width: 400px;
+}
+.mainbody .register form{
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
+.mainbody .register form input,.register form button{
+    margin: 10px;
+    padding: 5px;
+    font-size: 25px;
+    border-radius: 5px;
+    border-style: none;
+}
+.register form button,.header .nav form button{
+    color: white;
+    background-color: var(--darkgreen);
+}
+.details{
+    color: white;
+    margin-top: 30px;
+}
+.footer{
+    display: none;
+    position: fixed;
+    bottom: 0;
+    height: 80px;
+    width: 100%;
+    background-color: var(--goodgreen);
+    text-align: center;
+}
+.footer h3{
+    background-color: var(--darkgreen);
+    color: white;
+}
+/* ====================== post.html =========================== */
+.postbody{
+    display: block;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: scroll;
+}
+.context{
+    padding: 10px;
+}
+.person{
+    background-color: rgb(219, 219, 219);
+    display: flex;
+    width: 450px;
+    padding: 10px;
+    justify-content: space-between;
+}
+.allposts{
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 2px 5px 8px rgba(2, 2, 2, 0.158);
+    background-color: rgb(241, 240, 240);
+    margin-top: 20px;
+}
+.allposts .posting img{
+    width: 450px;
+    height: 300px;
+    object-fit: cover;
+}
+.allposts .panel{
+    display: flex;
+    min-width: 130px;
+    max-width: 160px;
+    justify-content: space-between;
+}
+.allposts .panel .likes, .allposts .panel .dislikes{
+    border-radius: 5px;
+    display: flex;
+    color:rgb(88, 88, 88);
+    font-weight: bold;
+    align-items: center;
+    background-color: rgb(223, 221, 221);
+    padding: 5px;
+    width: 75px;
+    margin: 2px;
+    justify-content: space-between;
+    border: 2px solid white;
+    cursor: pointer;
+}
+.allposts .panel .likes:hover, .allposts .panel .dislikes:hover, .allposts .panel .done{
+    border: 2px solid var(--darkgreen);
+    border-radius: 5px;
+    background-color: rgb(155, 155, 155);
+    color: white;
+}
+.allposts .panel img{
+    width: 25px;
+}
+.allposts .time{
+    display: flex;
+}
